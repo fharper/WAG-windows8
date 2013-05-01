@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="IdeaPress" Version="1.0.0.0" Publisher="CN=IdeaNotion" />
+  <Identity Name="41187FrdricHarper.WeareGeek" Version="1.0.0.0" Publisher="CN=1EF32174-9FDB-44DD-BFD6-11C64F525CEF" />
   <Properties>
     <DisplayName>We are Geek</DisplayName>
     <Description>We are Geek</Description>

@@ -44,8 +44,9 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateKeyFile>IdeaPress.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>IdeaPress_StoreKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <PackageCertificateThumbprint>9A99B71634821349F8EC4C4567CA57A5E9108140</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
@@ -53,6 +54,7 @@
     </AppxManifest>
     <Content Include="css\default.css" />
     <Content Include="css\themes\custom.css" />
+    <None Include="IdeaPress_StoreKey.pfx" />
     <Content Include="images\badgelogo.png" />
     <Content Include="images\blank.png" />
     <Content Include="images\logo.png" />
@@ -106,6 +108,7 @@
     <Content Include="modules\wordpress\pages\wp.module.html" />
     <Content Include="modules\wordpress\pages\wp.module.searchResults.html" />
     <Content Include="modules\wordpress\pages\wp.module.section.html" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="pages\about-flyout.html" />
     <Content Include="pages\hub.html" />
     <None Include="IdeaPress_TemporaryKey.pfx" />
