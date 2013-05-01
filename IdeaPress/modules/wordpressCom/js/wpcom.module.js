@@ -14,9 +14,10 @@ var wordpresscomModule = function (ideaPress, options) {
     this.defaultCount = 32;
     this.numberOfRelatedPosts = 4;
     this.maxPagingIndex = -1;
-    this.wideTileType = Windows.UI.Notifications.TileTemplateType.tileWideImageAndText01;
-    this.squareTileType = Windows.UI.Notifications.TileTemplateType.TileSquarePeekImageAndText04;
+    this.wideTileType =  Windows.UI.Notifications.TileTemplateType.tileWideImageAndText01;
+    this.squareTileType =  Windows.UI.Notifications.TileTemplateType.TileSquarePeekImageAndText04;
 
+    this.callBackUrl = "http://www.ideanotion.net/";
     // set options
     this.title = options.title;
     this.siteDomain = options.siteDomain;
@@ -189,8 +190,10 @@ wordpresscomModule.prototype.getLiveTileList = function () {
                 var template = self.wideTileType;
                 var tileXml = Windows.UI.Notifications.TileUpdateManager.getTemplateContent(template);
                 var tileImageElements = tileXml.getElementsByTagName("image");
-                tileImageElements[0].setAttribute("src", post.imgThumbUrl);
-                tileImageElements[0].setAttribute("alt", "Post Image");
+                if (tileImageElements && tileImageElements.length > 0) {
+                    tileImageElements[0].setAttribute("src", post.imgThumbUrl);
+                    tileImageElements[0].setAttribute("alt", "Post Image");
+                }
                 var tileTextElements = tileXml.getElementsByTagName("text");
                 if (tileTextElements && tileTextElements.length > 0)
                     tileTextElements[0].appendChild(tileXml.createTextNode(post.title));
@@ -199,8 +202,10 @@ wordpresscomModule.prototype.getLiveTileList = function () {
                 template = self.squareTileType;
                 var squareTileXml = Windows.UI.Notifications.TileUpdateManager.getTemplateContent(template);
                 var squareTileImageElements = squareTileXml.getElementsByTagName("image");
-                squareTileImageElements[0].setAttribute("src", post.imgThumbUrl);
-                squareTileImageElements[0].setAttribute("alt", "Post Image");
+                if(squareTileImageElements && squareTileImageElements.length > 0){
+                    squareTileImageElements[0].setAttribute("src", post.imgThumbUrl);
+                    squareTileImageElements[0].setAttribute("alt", "Post Image");
+                }
                 var squareTileTextElements = squareTileXml.getElementsByTagName("text");
                 if (squareTileTextElements && squareTileTextElements.length > 0)
                     squareTileTextElements[0].appendChild(squareTileXml.createTextNode(post.title));
@@ -709,7 +714,7 @@ wordpresscomModule.prototype.submitCommentWithoutToken = function (callback) {
     // https://public-api.wordpress.com/oauth2/authorize?client_id=your_client_id&redirect_uri=your_url&response_type=code
 
     var authorizeUrl = "https://public-api.wordpress.com/oauth2/authorize?client_id=";
-    var callbackUrl = "http://www.ideanotion.net/";
+    var callbackUrl = this.callBackUrl;
     authorizeUrl += this.clientId + "&redirect_uri=" + encodeURIComponent(callbackUrl) + "&response_type=code";
 
     try {
@@ -774,7 +779,7 @@ wordpresscomModule.prototype.callbackWordPressWebAuth = function (result, self, 
                 // You are required to pass client_id, client_secret, and redirect_uri for web applications. 
                 // These parameters have to match the details for your application. grant_type has to be set to “authorization_code”. 
                 // code must match the code you received in the redirect.
-                var callbackUrl = "http://www.wordpress.org/";
+                var callbackUrl = this.callBackUrl;
                 var fullUrl = 'https://public-api.wordpress.com/oauth2/token';
                 var postData = 'client_id=' + self.clientId + '&client_secret=' + self.clientSecret + '&redirect_uri=' + encodeURIComponent(callbackUrl) + '&grant_type=authorization_code&code=' + code;
                 var headers = { "User-Agent": 'wp-window8', "Content-type": "application/x-www-form-urlencoded" };

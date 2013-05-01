@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="IdeaPress" Version="1.0.0.0" Publisher="CN=Raymond" />
+  <Identity Name="IdeaPress" Version="1.0.0.0" Publisher="CN=IdeaNotion" />
   <Properties>
-    <DisplayName>IdeaPress</DisplayName>
-    <Description>IdeaPress</Description>
-    <PublisherDisplayName>IdeaNotion Development Inc.</PublisherDisplayName>
+    <DisplayName>We are Geek</DisplayName>
+    <Description>We are Geek</Description>
+    <PublisherDisplayName>Frédéric Harper</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -16,8 +16,8 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="IdeaPress" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="IdeaPress" ForegroundText="dark" BackgroundColor="#ffffff">
-        <DefaultTile ShowName="noLogos" WideLogo="images\widelogo.png" ShortName="IdeaPress" />
+      <VisualElements DisplayName="We are Geek" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="N/A" ForegroundText="dark" BackgroundColor="#ffffff">
+        <DefaultTile ShowName="noLogos" WideLogo="images\widelogo.png" ShortName="WeareGeek" />
         <SplashScreen Image="images\splashscreen.png" BackgroundColor="#ffffff" />
         <InitialRotationPreference>
           <Rotation Preference="portrait" />
