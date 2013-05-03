@@ -346,5 +346,10 @@
     <MainPackageIdentityName>41187FrdricHarper.MakeWebNotWar</MainPackageIdentityName>
     <MainPackageIdentityName>41187FrdricHarper.OutofComfortZone</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/8c18ed55-c652-4c6b-9984-29f7a6e9ffaf" />
+  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/8c18ed55-c652-4c6b-9984-29f7a6e9ffaf">
+    <PackageInfo>
+      <PackageArchitecture>neutral</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.0.0.0</PackageMaxArchitectureVersion>
+    </PackageInfo>
+  </PackageInfoList>
 </StoreAssociation>

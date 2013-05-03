@@ -43,7 +43,7 @@
   <PropertyGroup>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
-    <DefaultLanguage>en-US</DefaultLanguage>
+    <DefaultLanguage>fr-CA</DefaultLanguage>
     <PackageCertificateKeyFile>IdeaPress_StoreKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <PackageCertificateThumbprint>9A99B71634821349F8EC4C4567CA57A5E9108140</PackageCertificateThumbprint>
